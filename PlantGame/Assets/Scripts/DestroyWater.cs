@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyWater : MonoBehaviour
 {
+    public GameObject Jorge;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,11 @@ public class DestroyWater : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player")) 
+        {
+           
+            collision.GetComponent<Stat>().Watalvl += 1;
+        }
         Destroy(gameObject);
     }
 }

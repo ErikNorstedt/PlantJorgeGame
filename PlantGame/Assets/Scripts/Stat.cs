@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Stat : MonoBehaviour
 {
+
+    public float Watalvl;
     // Start is called before the first frame update
     void Start()
     {
